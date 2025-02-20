@@ -1,0 +1,67 @@
+/* Globalne ustawienia */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2e2e2e; /* Szare tło, jak w ulubionej konwersacji */
+  color: #ffffff;         /* Biały tekst, doskonale kontrastujący */
+}
+
+/* Nagłówek i nawigacja */
+header {
+  padding: 1rem;
+  background-color: #3e3e3e;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Główna treść i artykuły */
+main {
+  padding: 1rem;
+}
+
+#articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.article {
+  background-color: #444444;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Stopka */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #3e3e3e;
+}
+
+/* Ulepszenia responsywności – dla telefonu i komputera */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
