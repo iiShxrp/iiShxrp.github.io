@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "banner": "https://via.placeholder.com/400x200.png?text=Banner+1",
+      "title": "Artykuł pierwszy",
+      "description": "To jest opis artykułu. **Wyróżniony tekst** jest ważny."
+    },
+    {
+      "banner": "https://via.placeholder.com/400x200.png?text=Banner+2",
+      "title": "Artykuł drugi",
+      "description": "Kolejny artykuł z ciekawą treścią. **Sprawdź to!**"
+    }
+  ]
+}
