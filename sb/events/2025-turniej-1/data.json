@@ -1,0 +1,26 @@
+{
+  "title": "Turniej E-sportowy",
+  "matches": [
+    {
+      "round": 1,
+      "player1": "Gracz A",
+      "player2": "Gracz B",
+      "score1": 10,
+      "score2": 7
+    },
+    {
+      "round": 1,
+      "player1": "Gracz C",
+      "player2": "Gracz D",
+      "score1": 8,
+      "score2": 9
+    },
+    {
+      "round": 2,
+      "player1": "Zwycięzca Meczu 1",
+      "player2": "Zwycięzca Meczu 2",
+      "score1": 11,
+      "score2": 13
+    }
+  ]
+}
