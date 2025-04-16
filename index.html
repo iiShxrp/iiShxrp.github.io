@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">iiShxrp</a>
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+      <i class="fas fa-moon"></i> <!-- Ikona księżyca -->
+    </button>
+  </header>
+
+  <main class="main-content">
+    <h1>Witaj na stronie!</h1>
+    <p>Znajdziesz tutaj najnowsze informacje, projekty i inne ciekawe treści.</p>
+    <p>Jeśli chcesz, możesz śledzić mnie na różnych platformach społecznościowych. Dzięki za odwiedzenie!</p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://discord.gg/RftDgqUevj" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://youtube.com/@iiShxrp" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://github.com/iiShxrp" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p>&copy; 2025 iiShxrp. Wszystkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+    const navbar = document.querySelector(".navbar"); // Dodajemy navbar
+
+    // Sprawdzamy, czy użytkownik ma już ustawiony preferowany tryb nocny
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      body.classList.add("dark-mode");
+      navbar.classList.add("dark-mode"); // Dodajemy klasę dark-mode do navbar
+    }
+
+    toggleButton.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      navbar.classList.toggle("dark-mode"); // Przełączamy klasę dark-mode na navbar
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("dark-mode", "enabled");
+      } else {
+        localStorage.setItem("dark-mode", "disabled");
+      }
+    });
+  </script>
+</body>
+</html>
