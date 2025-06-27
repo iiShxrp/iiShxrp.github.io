@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+        <li><a href="index.html" class="nav-link active">Calendar</a></li>
+      </ul>
+    </nav>
+
+
+    <div id="eventForm" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Event</h3>
+            <form id="eventFormElement" autocomplete="off" novalidate>
+                <label class="event-name">
+                    <input type="text" name="title" required />
+                </label>
+                <div class="time-range">
+                    <input type="time" name="start" required />
+                    <span></span>
+                    <input type="time" name="end" required />
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="main-section">
+        <header class="section-header">Calendar</header>
+        <div class="calendar-grid" id="calendarGrid"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
