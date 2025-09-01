@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Rubik's Cube — Network</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav aria-label="Górny pasek">
+    <a href="../index.html" class="nav-brand" aria-label="Rubik's Cube — Network" tabindex="-1">NETWORK</a>
+
+    <div class="nav-actions" role="toolbar" aria-label="Akcje">
+      <button type="button" class="nav-btn" id="timerBtn" data-hash="#timer"><span>Timer</span></button>
+      <button type="button" class="nav-btn" id="scoresBtn" data-hash="#scores"><span>Scores</span></button>
+    </div>
+  </nav>
+
+  <div id="practiceBar" class="practice-bar practice-hidden" role="region" aria-label="Practice bar">
+    <div id="practiceScramble" class="scramble-text">—</div>
+    <div class="practice-actions">
+      <button type="button" id="switchModeBtn" class="practice-btn" title="Switch scramble mode">2 Generator Mode</button>
+      <button type="button" class="practice-btn" id="newScrambleBtn">New Scramble</button>
+    </div>
+  </div>
+
+  <aside class="side-panel" role="complementary" aria-label="Panel boczny">
+    <div style="display:flex; gap:8px; align-items:center;">
+      <select id="allocSelect" style="flex:1; padding:8px; border-radius:8px; background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03);">
+      </select>
+      <button type="button" id="allocNewBtn" class="btn-inline" title="New allocation">New</button>
+      <button type="button" id="allocDeleteBtn" class="btn-inline" title="Delete allocation">Del</button>
+    </div>
+    <div style="height:6px"></div>
+    <div id="allocRenameRow">
+      <input id="allocRenameInput" placeholder="Rename..." />
+      <button type="button" id="allocRenameBtn">Rename</button>
+    </div>
+
+    <div style="height:8px"></div>
+
+    <div id="sidebarTimer" class="side-section">
+      <div class="pb-row"><span>Single</span><span class="pb-val" id="pbSingle">—</span></div>
+      <div class="pb-row"><span>Average of 5</span><span class="pb-val" id="pbAo5">—</span></div>
+      <div class="pb-row"><span>Average of 12</span><span class="pb-val" id="pbAo12">—</span></div>
+
+      <div style="height:8px"></div>
+      <div class="session-row"><div>Session</div><div id="sessionNumber">—</div></div>
+      <div class="session-row"><div>Results</div><div id="sessionCount">0</div></div>
+
+      <div style="height:8px"></div>
+
+      <button type="button" id="timerHiddenBtn" class="btn">Timer: Shown</button>
+
+      <div style="height:8px"></div>
+      <button type="button" id="newSessionBtn" class="btn">New Session</button>
+      <div style="height:8px"></div>
+      <button type="button" id="practiceBtn" class="btn">Scramble</button>
+    </div>
+
+    <div id="sidebarScores" class="side-section" style="display:none;">
+      <div style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+        <button type="button" id="createSessionFromScores" class="btn" style="flex:1">New Session</button>
+        <button type="button" id="deleteSelectedSession" class="btn" style="width:44px; padding:8px">Del</button>
+      </div>
+      <div class="sessions-list" id="sessionsList">—</div>
+    </div>
+  </aside>
+
+  <main class="content" role="main">
+    <div id="timerView">
+      <div id="mainTimer" class="main-timer" aria-live="polite">0.00</div>
+    </div>
+
+    <div id="scoresView" style="display:none; width:100%; max-width:1100px;">
+      <div class="session-details" id="sessionDetails">
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; width:100%;">
+          <h2 style="color:#dff6ff; margin:0">Session details</h2>
+          <div style="color:rgba(191,207,224,0.6)" id="sessionMeta">—</div>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-card"><h3>Best</h3><p id="detailBest">—</p></div>
+          <div class="detail-card"><h3>Worst</h3><p id="detailWorst">—</p></div>
+          <div class="detail-card"><h3>Average</h3><p id="detailAvg">—</p></div>
+          <div class="detail-card"><h3>Ao5</h3><p id="detailAo5">—</p></div>
+          <div class="detail-card"><h3>Ao12</h3><p id="detailAo12">—</p></div>
+        </div>
+
+        <div style="width:100%;">
+          <h3 style="color:#dff6ff; margin:0 0 8px 0">Times</h3>
+          <div class="times-list" id="timesList"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>
